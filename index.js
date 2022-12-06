@@ -51,7 +51,7 @@ bot.on('messageCreate', async (message) => {
   
     // Enviar a resposta do OpenAI como uma mensagem no canal
     console.log(response.data.choices)
-    message.reply("R: "+ response.data.choices[0].text);
+    message.reply(response.data.choices[0].text);
   }catch(e){
     message.reply('Eu não consegui compreender a sua pergunta, por favor, repita de uma forma mais coerente.');
   }
