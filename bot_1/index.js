@@ -47,7 +47,7 @@ bot.on('messageCreate', async (message) => {
 
       let response = await openai.createCompletion({
         prompt: message.content,
-        model: 'text-curie-001',
+        model: 'text-davinci-003',
         temperature: .8,
         max_tokens: 650,
         top_p: .9,
@@ -57,7 +57,7 @@ bot.on('messageCreate', async (message) => {
       if(response.data.choices[0].text.length < 1){
         response = await openai.createCompletion({
           prompt: message.content,
-          model: 'text-curie-001',
+          model: 'text-davinci-003	',
           temperature: .7,
           max_tokens: 450,
           top_p: .9,
